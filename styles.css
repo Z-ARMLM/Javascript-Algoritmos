@@ -1,0 +1,22 @@
+/* fondo del cuerpo*/
+body{
+   /* background: #72b9ab;  /* fallback for old browsers 
+background: -webkit-linear-gradient(to right, #886f4a, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 
+background: linear-gradient(to right, #a48c5c, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background-image: url(./Multimedia/una-taza-de-javascript.png);
+}
+/*SEPARAR EL CONTENIDO DEL BORDE SUPERIOR*/
+.container{
+    margin-top: 15px;
+}
+/* "Tamano de las cards"*/ 
+.card{
+    margin:10px;
+    text-align: center;
+    padding: 20px;
+    height: auto;
+}
+/*Separar los botones del borde superior */
+.btn{
+    margin-top: 15px;
+}

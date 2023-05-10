@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos en java</title>
+    <link rel="icon" type="image/x-icon" href="./Multimedia/logito.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Algoritmos JavaScript
+________________________________________
+Realizar un archivo JavaScript con los siguientes algoritmos:
+1.	Algoritmo para calcular la distancia recorrida por un carro que mantenía movimiento constante (d = v x t).
+2.	Algoritmo para calcular el tiempo transcurrido por un carro que mantenía movimiento constante desplazandose a un lugar (t = d / v).
+3.	Algoritmo para calcular la velocidad a la recorria un carro que mantenía movimiento constante a cierta distancia a través del tiempo (v = d / t).
+
+4.	Algoritmo que me permita escribir un número y muestre la tabla de multiplicar de ese número (1 - 12).
+
+
+5.	Algoritmo para transformar texto en Código Morse.
+
+6.	Algoritmo para transformar Código Morse en texto.
+
+7.	Algoritmo para codificar mensajes utilizando Cifrado de César.
+
+8.	Algoritmo para decodificar mensajes utilizando Cifrado de César.
+
+9.	Algoritmo que me permita escribir un número y me retorne una lista de los números primos desde cero hasta el número indicado.
+
+10.	Algoritmo que me permita escribir un número decimal y me retorne el número convertido en binario.
+(int = 50; out = 110010)
+Añadir los Algoritmos realizados en clase:
+1.	Algoritmo que me permita escribir un número y me retorne una lista de números desde 1 hasta el número indicado (int = 5; out = 1, 2, 3, 4, 5).
+2.	Algoritmo que me permita escribir un número y me retorne una lista de números desde el número indicado hasta 1 (int = 5; out = 5, 4, 3, 2, 1).
+3.	Algoritmo que me permita escribir un número y me retorne una lista de números desde 1 hasta el número indicado separando pares e impares.
+(int = 5; outOdd = 1, 3, 5; outEven = 2, 4)
+4.	Algoritmo que me permita escribir un número y me retorne una lista de números desde el número indicado hasta 1 separando pares e impares.
+(int = 5; outOdd = 5, 3, 1; outEven = 4, 2)
+5.	Algoritmo visualizar la cantidad de dígitos que se le indique de la sucessión de fibonacci.
+(int = 5; out = 0, 1, 1, 2, 3)
+ -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <!-- CARD IDENTIFICADOR DEL CALCULO -->
+                <div class="card">
+                   <h2>CALCULO DISTANCIA DEL MRU</h2>
+                   <form >
+                       <label for="lados" class="form-label" >Cuanto es la velocidad?</label>
+                                                   <!--SE PIDEN LOS VALORES -->
+                       <input type="text" class="form-control" id="speed">
+                                                    <!-- SE INTRODUCEN VALORES -->
+                       <label for="lados" class="form-label" >Cuanto es el tiempo?</label>
+                                                   <!--SE PIDEN LOS VALORES -->
+                       <input type="text" class="form-control" id="time2">
+                                                <!-- SE INTRODUCEN VALORES -->
+                   </form>
+                   <p id="distanceResult"></p>
+                   <button class="btn btn-primary" onclick="calcDistance()">Calcular</button>
+                                        <!--BOTON QUE CALCULA MEDIANTE JAVASCRIPT -->
+                </div>
+           </div>
+           <div class="col-md-4">
+            <!-- CARD IDENTIFICADOR DEL CALCULO -->
+            <div class="card">
+               <h2>CALCULO DEL TIEMPO DEL MRU</h2>
+               <form >
+                   <label for="lados" class="form-label" >Cuanto es la distancia?</label>
+                                              <!--SE PIDEN LOS VALORES -->
+                   <input type="text" class="form-control" id="distance2">
+                                             <!-- SE INTRODUCEN VALORES -->
+                   <label for="lados" class="form-label" >Cuanto es la velocidad?</label>
+                                               <!--SE PIDEN LOS VALORES -->
+                   <input type="text" class="form-control" id="speedt">
+                                                <!-- SE INTRODUCEN VALORES -->
+               </form>
+               <p id="timeResult"></p>
+               <button class="btn btn-primary" onclick="calcTime()">Calcular</button>
+                                    <!--BOTON QUE CALCULA MEDIANTE JAVASCRIPT -->
+            </div>
+       </div>
+            <div class="col-md-4">
+                <!-- CARD IDENTIFICADOR DEL CALCULO -->
+                 <div class="card">
+                    <h2>CALCULO DE LA VELOCIDAD DEL MRU</h2>
+                    <form >
+                        <label for="lados" class="form-label" >Cuanto es la distancia?</label>
+                                                   <!--SE PIDEN LOS VALORES -->
+                        <input type="text" class="form-control" id="distance">
+                                                    <!-- SE INTRODUCEN VALORES -->
+                        <label for="lados" class="form-label" >Cuanto es el tiempo?</label>
+                                                    <!--SE PIDEN LOS VALORES -->
+                        <input type="text" class="form-control" id="time">
+                                                    <!-- SE INTRODUCEN VALORES -->
+
+                    </form>
+                    <p id="speedResult"></p>
+                                            <!-- SE IMPRIMIRA EL RESULTADO MEDIANTE JAVASCRIPT-->
+                    <button class="btn btn-primary" onclick="calcSpeed()">Calcular</button>
+                                         <!--BOTON QUE CALCULA MEDIANTE JAVASCRIPT -->
+                </div>
+            </div>
+            <div class="col-md-4">
+                <!-- CARD IDENTIFICADOR DEL CALCULO -->
+                <div class="card">
+                    <h2>TABLA DE MULTIPLICAR</h2>
+                            <form >
+                                <label for="lados" class="form-label" >Inserte un numero</label>
+                                                           <!--SE PIDEN LOS VALORES -->
+                                <input type="text" class="form-control" id="table">
+                                                            <!-- SE INTRODUCEN VALORES -->
+                            </form>
+                        <p>==========================</p>
+                        <p id="tableResult"></p>
+                                                <!-- SE IMPRIMIRA EL RESULTADO MEDIANTE JAVASCRIPT-->
+                        <p>==========================</p>
+                     <button class="btn btn-primary" onclick="calcTableM()">Calcular</button>
+                                          <!--BOTON QUE CALCULA MEDIANTE JAVASCRIPT -->
+
+                </div>
+            </div>
+        <div class="col-md-4">
+            <!-- CARD IDENTIFICADOR DEL CALCULO -->
+            <div class="card">
+                 <h2>TRANSFORMAR TEXTO A CODIGO MORSE</h2>
+                    <form >
+                        <label for="lenguajemorse" class="form-label" >Introduzca el texto</label>
+                                                   <!--SE PIDEN LOS VALORES -->
+                        <input type="text" class="form-control" id="lenguajemorse">
+                                                    <!-- SE INTRODUCEN VALORES -->
+
+                    </form>
+                    <p id="morseResult"></p>
+                                            <!-- SE IMPRIMIRA EL RESULTADO MEDIANTE JAVASCRIPT-->
+                    <button class="btn btn-primary" onclick="calcCodeMorse()">Calcular</button>
+                                     <!--BOTON QUE CALCULA MEDIANTE JAVASCRIPT -->
+            </div>
+        </div>
+        <div class="col-md-4">
+            <!-- CARD IDENTIFICADOR DEL CALCULO -->
+            <div class="card">
+                <h2>TRANSFORMAR CODIGO MORSE A TEXTO</h2>
+                        <form >
+                            <label for="lados" class="form-label" >Introduzca el mensaje</label>
+                                                        <!--SE PIDEN LOS VALORES -->
+                            <input type="text" class="form-control" id="mens2">
+                                                        <!-- SE INTRODUCEN VALORES -->
+                        </form>
+                    <p id="textoMorseResult"></p>
+                                            <!-- SE IMPRIMIRA EL RESULTADO MEDIANTE JAVASCRIPT-->
+                    <button class="btn btn-primary" onclick="calcDescoMorse()">Calcular</button>
+                                     <!--BOTON QUE CALCULA MEDIANTE JAVASCRIPT -->
+            </div>
+        </div>
+        <div class="col-md-4">
+            <!-- CARD IDENTIFICADOR DEL CALCULO -->
+            <div class="card">
+                <h2>CODIFICAR MENSAJES CON CIFRADO DE CESAR</h2>
+                        <form >
+                            <label for="lados" class="form-label" >Introduzca el mensaje</label>
+                                                        <!--SE PIDEN LOS VALORES -->
+                            <input type="text" class="form-control" id="mens3">
+                                                        <!-- SE INTRODUCEN VALORES -->
+                        </form>
+                    <p id="cesarResult"></p>
+                                            <!-- SE IMPRIMIRA EL RESULTADO MEDIANTE JAVASCRIPT-->
+                    <button class="btn btn-primary" onclick="calcCodiCesar()">Calcular</button>
+                                     <!--BOTON QUE CALCULA MEDIANTE JAVASCRIPT -->
+            </div>
+        </div>
+        <div class="col-md-4">
+             <!-- CARD IDENTIFICADOR DEL CALCULO -->
+            <div class="card">
+                <h2>DESCODIFICAR MENSAJES CON CIFRADO DE CESAR</h2>
+                        <form >
+                            <label for="lados" class="form-label" >Introduzca el mensaje</label>
+                                                        <!--SE PIDEN LOS VALORES -->
+                            <input type="text" class="form-control" id="mens4">
+                                                        <!-- SE INTRODUCEN VALORES -->
+                        </form>
+                <p id="desciCesarResult"></p>
+                                        <!-- SE IMPRIMIRA EL RESULTADO MEDIANTE JAVASCRIPT-->
+                <button class="btn btn-primary" onclick="calcDescoCesar()">Calcular</button>
+                                     <!--BOTON QUE CALCULA MEDIANTE JAVASCRIPT -->
+            </div>
+        </div>
+        <div class="col-md-4">
+            <!-- CARD IDENTIFICADOR DEL CALCULO -->
+            <div class="card">
+                <h2>NUMEROS PRIMOS</h2>
+                        <form >
+                            <label for="lados" class="form-label" >Introduce un numero</label>
+                                                       <!--SE PIDEN LOS VALORES --> 
+                            <input type="text" class="form-control" id="num">
+                                                        <!-- SE INTRODUCEN VALORES -->
+                        </form>
+                    <p id="cousinResult"></p>
+                                            <!-- SE IMPRIMIRA EL RESULTADO MEDIANTE JAVASCRIPT-->
+                    <button class="btn btn-primary" onclick="calcnumberCousin()">Calcular</button>
+                                     <!--BOTON QUE CALCULA MEDIANTE JAVASCRIPT -->
+            </div>
+        </div>
+        <div class="col-md-4">
+            <!-- CARD IDENTIFICADOR DEL CALCULO -->
+            <div class="card">
+                <h2>INTRODUCIR NUMEROS DECIMALES Y CONVERTIR A BINARIO</h2>
+                        <form >
+                            <label for="lados" class="form-label" >Introduce un numero</label>
+                                                        <!--SE PIDEN LOS VALORES -->
+                            <input type="text" class="form-control" id="number">
+                                                        <!-- SE INTRODUCEN VALORES -->
+                        </form>
+                        <p id="binarioResult"></p>
+                                                <!-- SE IMPRIMIRA EL RESULTADO MEDIANTE JAVASCRIPT-->
+                    <button class="btn btn-primary" onclick="calcNumberToBinari()">Calcular</button>
+                                     <!--BOTON QUE CALCULA MEDIANTE JAVASCRIPT -->
+            </div>
+        </div>
+<div class="container">
+<div class="row">
+    <h2 class="success bg-success-subtle">EJERCICIOS EN CLASE</h2>
+
+    <div class="col-md-4">
+        <!-- CARD IDENTIFICADOR DEL CALCULO -->
+        <div class="card">
+            <h2>Listado de numeros hasta el introducido</h2>
+                    <form >
+                        <label for="lados" class="form-label" >Introduce un numero</label>
+                                                    <!--SE PIDEN LOS VALORES -->
+                        <input type="text" class="form-control" id="num1">
+                                                    <!-- SE INTRODUCEN VALORES -->
+                    </form>
+                <p id="ascendentResult"></p>
+                                        <!-- SE IMPRIMIRA EL RESULTADO MEDIANTE JAVASCRIPT-->
+                <button class="btn btn-primary" onclick="calcAscendent()">Calcular</button>
+                                 <!--BOTON QUE CALCULA MEDIANTE JAVASCRIPT -->
+        </div>
+    </div>
+    <div class="col-md-4">
+        <!-- CARD IDENTIFICADOR DEL CALCULO -->
+        <div class="card">
+            <h2>Listado de numeros de forma descendente</h2>
+                    <form >
+                        <label for="lados" class="form-label" >Introduce un numero</label>
+                                                  <!--SE PIDEN LOS VALORES -->
+                        <input type="text" class="form-control" id="num2">
+                                                    <!-- SE INTRODUCEN VALORES -->
+                    </form>
+                <p id="descendentResult"></p>
+                                        <!-- SE IMPRIMIRA EL RESULTADO MEDIANTE JAVASCRIPT-->
+            <button class="btn btn-primary" onclick="calcdescendente()">Calcular</button>
+                                 <!--BOTON QUE CALCULA MEDIANTE JAVASCRIPT -->
+        </div>
+    </div>
+    <div class="col-md-4">
+        <!-- CARD IDENTIFICADOR DEL CALCULO -->
+        <div class="card">
+            <h2>Listado de numeros pares e impares</h2>
+                    <form >
+                        <label for="lados" class="form-label" >Introduce un numero</label>
+                                                   <!--SE PIDEN LOS VALORES -->
+                        <input type="text" class="form-control" id="num3">
+                                                    <!-- SE INTRODUCEN VALORES -->
+                    </form>
+                <p id="parImparResult"></p>
+                                        <!-- SE IMPRIMIRA EL RESULTADO MEDIANTE JAVASCRIPT-->
+                <button class="btn btn-primary" onclick="calcPair()">Calcular</button>
+                                 <!--BOTON QUE CALCULA MEDIANTE JAVASCRIPT -->
+            </div>
+    </div>
+    <div class="col-md-4">
+        <!-- CARD IDENTIFICADOR DEL CALCULO -->
+        <div class="card">
+            <h2>Listado de numeros pares e impares inverso</h2>
+                    <form >
+                        <label for="lados" class="form-label" >Introduce un numero</label>
+                                                   <!--SE PIDEN LOS VALORES --> 
+                        <input type="text" class="form-control" id="num4">
+                                                    <!-- SE INTRODUCEN VALORES -->
+                    </form>
+                <p id="inversoResult"></p>
+                                        <!-- SE IMPRIMIRA EL RESULTADO MEDIANTE JAVASCRIPT-->
+            <button class="btn btn-primary" onclick="calcInverso()">Calcular</button>
+                                <!--BOTON QUE CALCULA MEDIANTE JAVASCRIPT -->
+        </div>
+    </div>
+    <div class="col-md-4">
+        <!-- CARD IDENTIFICADOR DEL CALCULO -->
+        <div class="card">
+            <h2>Serie Fibonacci</h2>
+                    <form >
+                        <label for="lados" class="form-label" >Introduce un numero</label>
+                                                    <!--SE PIDEN LOS VALORES -->
+                        <input type="text" class="form-control" id="fibo">
+                                                <!-- SE INTRODUCEN VALORES -->
+                    </form>
+                <p id="fibonacciResult"></p>
+                                        <!-- SE IMPRIMIRA EL RESULTADO MEDIANTE JAVASCRIPT-->
+                <button class="btn btn-primary" onclick="calcFibonacci()">Calcular</button>
+                                         <!--BOTON QUE CALCULA MEDIANTE JAVASCRIPT -->
+            </div>
+        </div>
+</div>
+</div>
+     
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
